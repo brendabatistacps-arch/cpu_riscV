@@ -1,1 +1,1240 @@
 
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ProgCounter</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,rst_n,addr_in:32,w_en</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>addr_out:32</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>6</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\PC.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-4460" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>FetchStage</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,w_en,addr_in:32,next_addr_in:32,raw_instr:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>addr_out:32,next_addr_out:32,fetched_instr:32,rs1_addr:5,rs2_addr:5,rd_addr:5</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\instr_fetch.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-4240" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Adder32</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>OperandA:32,OperandB:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>ResultSum:32</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>4</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\adder.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-2400" y="-560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Clock</elementName>
+      <elementAttributes/>
+      <pos x="-4520" y="-160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RegisterFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>AddrBits</string>
+          <int>5</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>GPR_Block</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-3600" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>MainCtrl</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>op_code_word:32,hold_sig</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>Branch,MemRead,MemtoReg,ALUop:2,MemWrite,ALUsrc,RegWrite,funct7:7,funct3:3,opcode:7,PC_shift_ctrl,JumpReg</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>11</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\Control.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-3860" y="-540"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ImmExtender</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>instruction:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>extended_imm:32</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>5</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\ImmGen.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-3480" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>SysInput</string>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="-4380" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>intFormat</string>
+          <intFormat>bin</intFormat>
+        </entry>
+      </elementAttributes>
+      <pos x="-4520" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>BubbleUnit</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,MemRead,rs1_addr:5,rs2_addr:5,rd_addr:5</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>hold_sig</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\Hazard.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-4140" y="-560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>PipeReg_ID_EX</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,Branch_in,MemRead_in,MemtoReg_in,ALUop_in:2,MemWrite_in,ALUscr_in,RegWrite_in,funct7_in:7,funct3_in:3,opcode_in:7,PC_shift_ctrl_in,JumpReg_in,PC_in:32,RegDataA_in:32,RegDataB_in:32,imm_in:32,rs1_in:5,rs2_in:5,rd_in:5</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>Branch,MemRead,MemtoReg,ALUop:2,MemWrite,ALUscr,RegWrite,funct7:7,funct3:3,opcode:7,PC_shift_ctrl,JumpReg,PC:32,RegDataA:32,RegDataB:32,imm:32,rs1:5,rs2:5,rd:5</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>15</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\idex.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-3300" y="-560"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ALU_Unit</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>SrcMuxA:32,SrcMuxB:32,alu_control:4</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>alu_out:32,zero_flag</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>9</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\ULA.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-2160" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>ALU_Decoder</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>funct7:7,funct3:3,opcode:7,ALUop:2</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>alu_control:4,branch_cond</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\ULA_control.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-2780" y="-420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>BypassUnit</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,WB_RegWrite,MEM_RegWrite,rs1_addr:5,rs2_addr:5,WB_rd:5,MEM_rd:5</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>FwdMuxA:2,FwdMuxB:2</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>10</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\Forward.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-2820" y="20"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Selector Bits</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2240" y="-400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Selector Bits</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2280" y="-160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2420" y="-420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2460" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2520" y="-200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2480" y="-580"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1940" y="-240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>inverterConfig</string>
+          <inverterConfig>
+            <string>In_2</string>
+          </inverterConfig>
+        </entry>
+      </elementAttributes>
+      <pos x="-2720" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>PipeReg_EX_MEM</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,Branch_in,MemRead_in,MemtoReg_in,MemWrite_in,RegWrite_in,PC2_in:32,RegDataB_in:32,rd_in:5,zero_flag_in,alu_out_in:32,jar_in</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>Branch,MemRead,MemtoReg,MemWrite,RegWrite,PC2:32,RegDataB:32,rd:5,zero_flag,alu_out:32,jar</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>13</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\exmem.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-1700" y="-400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="2"/>
+        </entry>
+      </elementAttributes>
+      <pos x="-4060" y="-420"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-4620" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1360" y="-760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Or</elementName>
+      <elementAttributes>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-1260" y="-740"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>PipeReg_MEM_WB</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>clock,RegWrite_in,MemtoReg_in,MemData_in:32,alu_out_in:32,rd_in:5</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>RegWrite,MemtoReg,MemData:32,alu_out:32,rd:5</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>12</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\memwb.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-660" y="-400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Multiplexer</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-280" y="-440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2260" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Ground</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="1"/>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2320" y="-100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-2500" y="-120"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>DataUnpacker</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>packed_32:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>unpacked_high:16,unpacked_low:16</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\spliter.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-1260" y="-60"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RAMDualPort</elementName>
+      <elementAttributes>
+        <entry>
+          <string>AddrBits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-920" y="-180"/>
+    </visualElement>
+    <visualElement>
+      <elementName>RAMDualPort</elementName>
+      <elementAttributes>
+        <entry>
+          <string>AddrBits</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>16</int>
+        </entry>
+      </elementAttributes>
+      <pos x="-920" y="-40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>DataPacker</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>half_high:16,half_low:16</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>packed_out:32</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>6</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\joiner.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-800" y="-80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>ExternalFile</elementName>
+      <elementAttributes>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>AddrUnpacker</string>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>packed_32:32</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>unpacked_high:16,unpacked_low:16</string>
+        </entry>
+        <entry>
+          <string>Width</string>
+          <int>8</int>
+        </entry>
+        <entry>
+          <string>CodeFile</string>
+          <file>C:\Projetos\riscv_core\rtl\spliter.vhd</file>
+        </entry>
+      </elementAttributes>
+      <pos x="-1260" y="20"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="-4660" y="0"/>
+      <p2 x="-4600" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="0"/>
+      <p2 x="-920" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="0"/>
+      <p2 x="-820" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="-3340" y="-260"/>
+      <p2 x="-3300" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-260"/>
+      <p2 x="-2560" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-2240" y="-260"/>
+      <p2 x="-1700" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-1440" y="-260"/>
+      <p2 x="-1400" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-4160" y="-260"/>
+      <p2 x="-3380" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-1400" y="-260"/>
+      <p2 x="-680" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-2560" y="-260"/>
+      <p2 x="-2440" y="-260"/>
+    </wire>
+    <wire>
+      <p1 x="-2840" y="-520"/>
+      <p2 x="-2460" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-520"/>
+      <p2 x="-3300" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-3980" y="-520"/>
+      <p2 x="-3940" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-4200" y="-520"/>
+      <p2 x="-4140" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-520"/>
+      <p2 x="-2940" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-2440" y="-520"/>
+      <p2 x="-2400" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-3940" y="-520"/>
+      <p2 x="-3860" y="-520"/>
+    </wire>
+    <wire>
+      <p1 x="-3520" y="-140"/>
+      <p2 x="-3360" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-2480" y="-140"/>
+      <p2 x="-2460" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-2820" y="-140"/>
+      <p2 x="-2500" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-3620" y="-140"/>
+      <p2 x="-3600" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-2300" y="-140"/>
+      <p2 x="-2280" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-860" y="-140"/>
+      <p2 x="-820" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-1000" y="-140"/>
+      <p2 x="-920" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-4660" y="-780"/>
+      <p2 x="-1160" y="-780"/>
+    </wire>
+    <wire>
+      <p1 x="-2860" y="140"/>
+      <p2 x="-2820" y="140"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-400"/>
+      <p2 x="-3300" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-400"/>
+      <p2 x="-2780" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-2380" y="-400"/>
+      <p2 x="-2240" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-2620" y="-400"/>
+      <p2 x="-2600" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-1720" y="-400"/>
+      <p2 x="-1700" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-1440" y="-400"/>
+      <p2 x="-1400" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-920" y="-400"/>
+      <p2 x="-660" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-300" y="-400"/>
+      <p2 x="-280" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="-400"/>
+      <p2 x="-400" y="-400"/>
+    </wire>
+    <wire>
+      <p1 x="-3920" y="-20"/>
+      <p2 x="-3720" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-2960" y="-20"/>
+      <p2 x="-1760" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-980" y="-20"/>
+      <p2 x="-920" y="-20"/>
+    </wire>
+    <wire>
+      <p1 x="-2980" y="-660"/>
+      <p2 x="-1740" y="-660"/>
+    </wire>
+    <wire>
+      <p1 x="-3780" y="20"/>
+      <p2 x="-2820" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-2620" y="20"/>
+      <p2 x="-2220" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-4500" y="20"/>
+      <p2 x="-4300" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-4280" y="20"/>
+      <p2 x="-3900" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-1300" y="20"/>
+      <p2 x="-1260" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-1020" y="20"/>
+      <p2 x="-920" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="20"/>
+      <p2 x="-1060" y="20"/>
+    </wire>
+    <wire>
+      <p1 x="-3900" y="-280"/>
+      <p2 x="-3600" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-3360" y="-280"/>
+      <p2 x="-3300" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-2860" y="-280"/>
+      <p2 x="-2740" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-280"/>
+      <p2 x="-2880" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-1840" y="-280"/>
+      <p2 x="-1700" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-1440" y="-280"/>
+      <p2 x="-1280" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-2740" y="-280"/>
+      <p2 x="-2400" y="-280"/>
+    </wire>
+    <wire>
+      <p1 x="-3620" y="280"/>
+      <p2 x="-2580" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-540"/>
+      <p2 x="-3300" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-3880" y="-540"/>
+      <p2 x="-3860" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-540"/>
+      <p2 x="-2960" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-2500" y="-540"/>
+      <p2 x="-2480" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-2320" y="-540"/>
+      <p2 x="-1840" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-4160" y="-540"/>
+      <p2 x="-4140" y="-540"/>
+    </wire>
+    <wire>
+      <p1 x="-2420" y="-160"/>
+      <p2 x="-2280" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-2560" y="-160"/>
+      <p2 x="-2520" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-1060" y="-160"/>
+      <p2 x="-920" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-4520" y="-160"/>
+      <p2 x="-4500" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-4260" y="-160"/>
+      <p2 x="-3780" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-4500" y="-160"/>
+      <p2 x="-4260" y="-160"/>
+    </wire>
+    <wire>
+      <p1 x="-3560" y="-800"/>
+      <p2 x="-3440" y="-800"/>
+    </wire>
+    <wire>
+      <p1 x="-3440" y="-800"/>
+      <p2 x="-400" y="-800"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-420"/>
+      <p2 x="-3300" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-420"/>
+      <p2 x="-2780" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-2620" y="-420"/>
+      <p2 x="-2580" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-2560" y="-420"/>
+      <p2 x="-2500" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-4300" y="-420"/>
+      <p2 x="-4100" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-4060" y="-420"/>
+      <p2 x="-3940" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-420"/>
+      <p2 x="-220" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-2500" y="-420"/>
+      <p2 x="-2420" y="-420"/>
+    </wire>
+    <wire>
+      <p1 x="-4500" y="-40"/>
+      <p2 x="-4460" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-4260" y="-40"/>
+      <p2 x="-4240" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-4640" y="-40"/>
+      <p2 x="-4620" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-3920" y="-40"/>
+      <p2 x="-3820" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-820" y="-40"/>
+      <p2 x="-800" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="-40"/>
+      <p2 x="-920" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-3820" y="-40"/>
+      <p2 x="-3740" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-3740" y="-40"/>
+      <p2 x="-3600" y="-40"/>
+    </wire>
+    <wire>
+      <p1 x="-3320" y="-680"/>
+      <p2 x="-1720" y="-680"/>
+    </wire>
+    <wire>
+      <p1 x="-2620" y="40"/>
+      <p2 x="-2260" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-3440" y="40"/>
+      <p2 x="-2820" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-960" y="40"/>
+      <p2 x="-920" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="40"/>
+      <p2 x="-980" y="40"/>
+    </wire>
+    <wire>
+      <p1 x="-3600" y="-300"/>
+      <p2 x="-3300" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-300"/>
+      <p2 x="-2560" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="-1820" y="-300"/>
+      <p2 x="-1700" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="-1440" y="-300"/>
+      <p2 x="-1340" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="-680" y="-300"/>
+      <p2 x="-660" y="-300"/>
+    </wire>
+    <wire>
+      <p1 x="-2440" y="-560"/>
+      <p2 x="-2400" y="-560"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-560"/>
+      <p2 x="-2980" y="-560"/>
+    </wire>
+    <wire>
+      <p1 x="-4260" y="-560"/>
+      <p2 x="-4140" y="-560"/>
+    </wire>
+    <wire>
+      <p1 x="-3580" y="-560"/>
+      <p2 x="-3320" y="-560"/>
+    </wire>
+    <wire>
+      <p1 x="-3320" y="-560"/>
+      <p2 x="-3300" y="-560"/>
+    </wire>
+    <wire>
+      <p1 x="-4220" y="-180"/>
+      <p2 x="-3820" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-3720" y="-180"/>
+      <p2 x="-3300" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-2480" y="-180"/>
+      <p2 x="-2460" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-1720" y="-180"/>
+      <p2 x="-1700" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-1080" y="-180"/>
+      <p2 x="-920" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-720" y="-180"/>
+      <p2 x="-660" y="-180"/>
+    </wire>
+    <wire>
+      <p1 x="-4640" y="180"/>
+      <p2 x="-1340" y="180"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-440"/>
+      <p2 x="-3300" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-440"/>
+      <p2 x="-2900" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-1720" y="-440"/>
+      <p2 x="-1220" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-320" y="-440"/>
+      <p2 x="-280" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-1220" y="-440"/>
+      <p2 x="-920" y="-440"/>
+    </wire>
+    <wire>
+      <p1 x="-2580" y="-60"/>
+      <p2 x="-2160" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-4580" y="-60"/>
+      <p2 x="-4460" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-2820" y="-60"/>
+      <p2 x="-2740" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-3920" y="-60"/>
+      <p2 x="-3800" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-4280" y="-60"/>
+      <p2 x="-4240" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-1100" y="-60"/>
+      <p2 x="-1080" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-680" y="-60"/>
+      <p2 x="-660" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-1280" y="-60"/>
+      <p2 x="-1260" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-3800" y="-60"/>
+      <p2 x="-3760" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-3760" y="-60"/>
+      <p2 x="-3600" y="-60"/>
+    </wire>
+    <wire>
+      <p1 x="-1360" y="-700"/>
+      <p2 x="-1260" y="-700"/>
+    </wire>
+    <wire>
+      <p1 x="-2440" y="60"/>
+      <p2 x="-1720" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="-2880" y="60"/>
+      <p2 x="-2820" y="60"/>
+    </wire>
+    <wire>
+      <p1 x="-3640" y="-320"/>
+      <p2 x="-3300" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="-3000" y="-320"/>
+      <p2 x="-2520" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="-1800" y="-320"/>
+      <p2 x="-1700" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="-1440" y="-320"/>
+      <p2 x="-1420" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="-700" y="-320"/>
+      <p2 x="-660" y="-320"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="-320"/>
+    </wire>
+  </wires>
+</circuit>
